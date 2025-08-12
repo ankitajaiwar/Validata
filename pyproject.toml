@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Validata"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple data quality checking package"
 authors = [
     { name = "Ankita Singh" }
@@ -23,3 +23,6 @@ where = ["src"]
 dev = ["pytest"]
 
 [project.urls]
+"Homepage" = "https://github.com/ankitajaiwar/Validata"
+"Bug Tracker" = "https://github.com/ankitajaiwar/Validata/issues"
+
