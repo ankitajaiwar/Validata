@@ -1,6 +1,10 @@
-# Validata: A tool for data quality checks
+# Validata/datax-validator: A simple and user friendly package for data quality checks
 A Python package to validate data quality for pandas DataFrames with flexible, configurable rules.
 
+## Installation
+```bash
+pip install datax-validator
+```
 ---
 
 ## Features
@@ -298,5 +302,6 @@ Column: dob
       Row 2: dob = None
 
 ETL pipeline terminated due to data quality errors.
+
 
 
