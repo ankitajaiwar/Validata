@@ -1,0 +1,46 @@
+python -m pip install --upgrade build twine
+python -m build
+
+This will create 
+
+dist/
+  validata_checker-0.1.0.tar.gz
+  validata_checker-0.1.0-py3-none-any.whl
+
+
+ Test Publish to TestPyPI
+Before publishing to production PyPI, test it on TestPyPI:
+
+
+python -m twine upload --repository testpypi dist/*
+
+
+Login with your TestPyPI credentials.
+
+To install from TestPyPI:
+
+
+pip install --index-url https://test.pypi.org/simple/ validata-checker
+
+
+5️⃣ Publish to PyPI
+Once tested, publish to the real PyPI:
+
+
+python -m twine upload dist/*
+Login with your PyPI credentials.
+
+
+6️⃣ Verify Installation
+Test in a new environment:
+
+
+pip install validata-checker
+Then:
+
+
+from validata.checker import DataQualityChecker
+from validata.rules import check_min_length
+✅ If this works, your package is live.
+
+python -m twine upload --repository testpypi  -u __token__ -p pypi-AgENdGVzdC5weXBpLm9yZwIkMDQzYWViM2EtYzE3Zi00ODQ2LWE0Y2QtMTgyNmQ1ODBmOWI0AAIqWzMsIjdiOTBlYmZhLWQwYWEtNDBjNi04ZDc3LTQ3MDVjZjhiYTI3NCJdAAAGIKxl9nJMTRZQJ9Rmoi26DZC3IF5zZBiQfSvWPnq0qQau  dist/* --verbose

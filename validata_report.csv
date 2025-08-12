@@ -1,0 +1,5 @@
+column,check,status,message,failed_examples
+name,Min Length 3,FAIL,2 values shorter than 3,"[{'index': 1, 'name': 'Bo'}, {'index': 3, 'name': ''}]"
+age,Numeric Check,FAIL,1 non-numeric values,"[{'index': 1, 'age': 'NaN'}]"
+age,Outlier Z-Score (2),PASS,No outliers detected,[]
+dob,Date Format %Y-%m-%d,FAIL,2 invalid dates,"[{'index': 1, 'dob': 'not-a-date'}, {'index': 3, 'dob': '2000-13-01'}]"
